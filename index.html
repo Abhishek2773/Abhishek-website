@@ -208,32 +208,37 @@ New Delhi, India.</strong> <span class="tag">Conference</span>
 <!--       <p class="note">To add social links, edit this section. You can also place a <code>contact.html</code> or Google Form link here.</p> -->
     </section>
 
-    <div class="footer">
-      <div>© <span id="y"></span> Abhishek Bansal · Built with HTML/CSS · Hosted on GitHub Pages</div>
-      <div id="visit-counter" class="note">Views: <span id="visit-count">—</span></div>
-  </div>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
-  <script>
-  (function () {
-    // Change these to something unique for your site
-    const namespace = 'abhishek2773.github.io';
-    const key = 'portfolio_index';
+  <div class="footer">
+  <div>© <span id="y"></span> Abhishek Bansal · Built with HTML/CSS · Hosted on GitHub Pages</div>
+  <div id="visit-counter" class="note">Views: <span id="visit-count">—</span></div>
+</div>
 
-    const url = `https://api.countapi.xyz/hit/${encodeURIComponent(namespace)}/${encodeURIComponent(key)}`;
-    fetch(url)
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  (function () {
+    const namespace = 'abhishek2773';       // ✅ keep simple, no dots
+    const key = 'portfolio_index';          // ✅ unique key
+
+    const url = `https://api.countapi.xyz/hit/${namespace}/${key}`;
+    fetch(url, { cache: 'no-store' })
       .then(r => r.json())
       .then(data => {
         const el = document.getElementById('visit-count');
         if (el && data && typeof data.value === 'number') {
           el.textContent = data.value.toLocaleString();
+        } else {
+          console.error('Counter unexpected response:', data);
         }
       })
-      .catch(() => {
+      .catch(err => {
+        console.error('Counter fetch failed:', err);
         const el = document.getElementById('visit-count');
         if (el) el.textContent = '—';
       });
   })();
-  </script>
+</script>
+ 
   
 </body>
 </html>
