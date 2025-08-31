@@ -52,7 +52,7 @@
     .item h3{margin:0 0 8px;font-size:18px}
     .item p{margin:0;color:var(--muted)}
     .list{display:flex;flex-direction:column;gap:10px}
-    .footer{margin:30px 0 10px;color:var(--muted);font-size:13px}
+    .footer{display:flex;justify-content:space-between;align-items:center;margin:30px 0 10px;color:var(--muted);font-size:13px}
     .note{font-size:13px;color:var(--muted)}
     .pub{border-left:3px solid #60a5fa;padding-left:12px}
     .tag{font-size:12px;opacity:.9;background:rgba(99,102,241,.18);padding:4px 8px;border-radius:999px;margin-left:6px}
@@ -106,7 +106,7 @@
       </div>
       <div class="card">
         <img class="avatar" src="abhishek.jpg" alt="Abhishek Bansal"/>
-        <div class="kpi" style="margin-top:12px">
+<!--         <div class="kpi" style="margin-top:12px">
           <strong>E-scooter data </strong>
           <span class="pill">GPS points (Delhi–Gurgaon dataset)</span>
         </div>
@@ -117,7 +117,7 @@
         <div class="kpi">
           <strong>PBS data</strong>
           <span class="pill">Analysing PBS data in hetrogenous conditions  </span>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -201,8 +201,32 @@ New Delhi, India.</strong> <span class="tag">Conference</span>
 <!--       <p class="note">To add social links, edit this section. You can also place a <code>contact.html</code> or Google Form link here.</p> -->
     </section>
 
-    <div class="footer">© <span id="y"></span> Abhishek Bansal · Built with HTML/CSS · Hosted on GitHub Pages</div>
+    <div class="footer">
+      <div>© <span id="y"></span> Abhishek Bansal · Built with HTML/CSS · Hosted on GitHub Pages</div>
+      <div id="visit-counter" class="note">Views: <span id="visit-count">—</span></div>
   </div>
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <script>
+  (function () {
+    // Change these to something unique for your site
+    const namespace = 'abhishek2773.github.io';
+    const key = 'portfolio_index';
+
+    const url = `https://api.countapi.xyz/hit/${encodeURIComponent(namespace)}/${encodeURIComponent(key)}`;
+    fetch(url)
+      .then(r => r.json())
+      .then(data => {
+        const el = document.getElementById('visit-count');
+        if (el && data && typeof data.value === 'number') {
+          el.textContent = data.value.toLocaleString();
+        }
+      })
+      .catch(() => {
+        const el = document.getElementById('visit-count');
+        if (el) el.textContent = '—';
+      });
+  })();
+  </script>
+  
 </body>
 </html>
