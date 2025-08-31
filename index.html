@@ -208,40 +208,23 @@ New Delhi, India.</strong> <span class="tag">Conference</span>
 <!--       <p class="note">To add social links, edit this section. You can also place a <code>contact.html</code> or Google Form link here.</p> -->
     </section>
 
-  <div class="footer">
+<div class="footer">
   <div>© <span id="y"></span> Abhishek Bansal · Built with HTML/CSS · Hosted on GitHub Pages</div>
-  <div id="visit-counter" class="note">Views: <span id="visit-count">—</span></div>
-    <div id="visit-counter" class="note">
-  Views: 
-  <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fabhishek2773.github.io%2F&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visits&edge_flat=false" alt="views badge"/>
+  <div id="visit-counter" class="note">
+    Views:
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fabhishek2773.github.io%2FAbhishek_portfolio%2F&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visits&edge_flat=false" alt="views badge"/>
+  </div>
 </div>
+
+<script>
+  // keep this for the © year auto-update
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
 
   </div>
 
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
-
-  (function () {
-    const namespace = 'abhishek2773';       // ✅ keep simple, no dots
-    const key = 'portfolio_index';          // ✅ unique key
-
-    const url = `https://api.countapi.xyz/hit/${namespace}/${key}`;
-    fetch(url, { cache: 'no-store' })
-      .then(r => r.json())
-      .then(data => {
-        const el = document.getElementById('visit-count');
-        if (el && data && typeof data.value === 'number') {
-          el.textContent = data.value.toLocaleString();
-        } else {
-          console.error('Counter unexpected response:', data);
-        }
-      })
-      .catch(err => {
-        console.error('Counter fetch failed:', err);
-        const el = document.getElementById('visit-count');
-        if (el) el.textContent = '—';
-      });
-  })();
 </script>
  
   
