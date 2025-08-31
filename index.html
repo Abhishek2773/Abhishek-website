@@ -1,4 +1,200 @@
-<html>
-  <head><title>Abhishek Bansal</title></head>
-  <body><h1>Hello, this is my website!</h1></body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abhishek Bansal | Micromobility Research</title>
+  <meta name="description" content="PhD scholar at IIT Delhi (TRIP-C) focusing on micromobility, PBS systems, e-scooters, safety, and urban policy analytics for Indian cities."/>
+  <meta property="og:title" content="Abhishek Bansal | Micromobility Research"/>
+  <meta property="og:description" content="Micromobility & NMT research, spatial analytics, policy, and open data."/>
+  <meta property="og:type" content="website"/>
+  <meta name="color-scheme" content="light dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0d11; --card:#12151b; --muted:#9aa4b2; --text:#e7e9ed; --brand:#4fd1c5; --brand-2:#60a5fa; --chip:#1f2937;
+      --bgL:#f7f8fb; --cardL:#ffffff; --textL:#0f172a; --mutedL:#606b85; --chipL:#eef2ff; --borderL:#e5e7eb;
+      --radius:16px;
+    }
+    html{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;}
+    body{margin:0;background:var(--bg);color:var(--text);} 
+    @media (prefers-color-scheme: light){body{background:var(--bgL);color:var(--textL);} }
+    .wrap{max-width:1100px;margin:0 auto;padding:28px;}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}
+    .nav a.logo{font-weight:700;letter-spacing:.2px;text-decoration:none;color:inherit;font-size:20px}
+    .nav .links{display:flex;gap:14px;flex-wrap:wrap}
+    .nav .links a{opacity:.9;text-decoration:none;color:inherit;padding:8px 12px;border-radius:12px;border:1px solid transparent}
+    .nav .links a:hover{border-color:#3b82f6}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:center}
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}}
+    .card{background:var(--card);border-radius:var(--radius);padding:24px;border:1px solid rgba(255,255,255,.06);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    @media (prefers-color-scheme: light){.card{background:var(--cardL);border:1px solid var(--borderL);box-shadow:0 10px 25px rgba(15,23,42,.06)}}
+    h1{font-size:34px;line-height:1.15;margin:0 0 10px}
+    .subtitle{color:var(--muted);font-weight:500}
+    @media (prefers-color-scheme: light){.subtitle{color:var(--mutedL)}}
+    .chips{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+    .chip{background:var(--chip);padding:8px 12px;border-radius:999px;font-size:13px;border:1px solid rgba(255,255,255,.08)}
+    @media (prefers-color-scheme: light){.chip{background:var(--chipL);border:1px solid #e0e7ff}}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .btn{appearance:none;border:none;border-radius:12px;padding:12px 16px;font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#051017}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.14);color:inherit}
+    @media (prefers-color-scheme: light){.btn.ghost{border:1px solid var(--borderL)}}
+    section{margin-top:26px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    @media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:700px){.grid{grid-template-columns:1fr}}
+    .kpi{display:flex;gap:12px;align-items:center}
+    .kpi strong{font-size:24px}
+    .pill{font-size:13px;opacity:.9}
+    .item h3{margin:0 0 8px;font-size:18px}
+    .item p{margin:0;color:var(--muted)}
+    .list{display:flex;flex-direction:column;gap:10px}
+    .footer{margin:30px 0 10px;color:var(--muted);font-size:13px}
+    .note{font-size:13px;color:var(--muted)}
+    .pub{border-left:3px solid #60a5fa;padding-left:12px}
+    .tag{font-size:12px;opacity:.9;background:rgba(99,102,241,.18);padding:4px 8px;border-radius:999px;margin-left:6px}
+    .avatar{aspect-ratio:1/1;width:100%;border-radius:14px;object-fit:cover}
+    .inline-links a{color:#60a5fa;text-decoration:none}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Abhishek Bansal",
+    "affiliation":{"@type":"Organization","name":"IIT Delhi, TRIP-C"},
+    "jobTitle":"PhD Scholar, Transportation Engineering",
+    "url":"https://abhishek2773.github.io/Micromobility_Policy/",
+    "sameAs":["https://github.com/abhishek2773"],
+    "knowsAbout":["Micromobility","Public Bicycle Sharing","e-scooters","Road safety","Spatial analytics","IUDX","GIS"]
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav">
+      <a class="logo" href="#">Abhishek Bansal</a>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#talks">Talks</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <div class="card">
+        <h1>Micromobility & Safe Streets for Indian Cities</h1>
+        <div class="subtitle">PhD scholar, <strong>TRIP‑C, IIT Delhi</strong> · Micromobility, PBS, e‑scooters, safety, policy & spatial analytics</div>
+        <div class="chips">
+          <span class="chip">GPS trajectory analytics</span>
+          <span class="chip">IUDX & Bytebeam data</span>
+          <span class="chip">Negative Binomial / ZINB</span>
+          <span class="chip">Geo/Spatial modeling</span>
+          <span class="chip">Policy portals & open data</span>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn ghost" href="#publications">Publications</a>
+          <a class="btn ghost" href="Micromobility_Bansal_CV.pdf">Download CV</a>
+        </div>
+        <p class="note" style="margin-top:12px">Tip: place <code>Micromobility_Bansal_CV.pdf</code> in this repo root to activate the button.</p>
+      </div>
+      <div class="card">
+        <img class="avatar" src="https://avatars.githubusercontent.com/u/11444261?v=4" alt="Profile"/>
+        <div class="kpi" style="margin-top:12px">
+          <strong>173M+</strong>
+          <span class="pill">GPS points analysed (Delhi–Gurgaon dataset)</span>
+        </div>
+        <div class="kpi">
+          <strong>59</strong>
+          <span class="pill">Policy papers coded (systematic review)</span>
+        </div>
+        <div class="kpi">
+          <strong>10–16/km²</strong>
+          <span class="pill">PBS siting benchmark used (ITDP)</span>
+        </div>
+      </div>
+    </div>
+
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p>I am a PhD scholar at the Transportation Research and Injury Prevention Centre (TRIP‑C), IIT Delhi. My research focuses on the emergence and integration of <strong>micromobility</strong> (PBS, e‑bikes, e‑scooters) in India—combining large‑scale GPS datasets, GIS, and econometric models to inform safer, more equitable infrastructure and policy.</p>
+      <p class="inline-links">Related: policy portal → <a href="https://abhishek2773.github.io/Micromobility_Policy/">Micromobility_Policy</a></p>
+    </section>
+
+    <section id="research" class="card">
+      <h2>Research Interests</h2>
+      <div class="chips">
+        <span class="chip">PBS station siting & density</span>
+        <span class="chip">Mode choice & demand modelling</span>
+        <span class="chip">Crash & safety analytics</span>
+        <span class="chip">Spatial lag / Durbin</span>
+        <span class="chip">Policy benchmarking</span>
+      </div>
+      <ul class="list">
+        <li class="item"><h3>Trip generation & station influence</h3><p>NB/ZINB models with land‑use, income proxies (night‑lights), and POIs; equity & accessibility overlays.</p></li>
+        <li class="item"><h3>Large‑scale GPS parsing</h3><p>Trajectory cleaning, stop/move segmentation, OD inference, and rebalancing analytics for delivery e‑scooters.</p></li>
+        <li class="item"><h3>Policy & implementation mapping</h3><p>Country‑wise micromobility regulations compared with Indian context; gaps & roadmaps.</p></li>
+      </ul>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>Selected Projects</h2>
+      <div class="grid">
+        <div class="item">
+          <h3>Chandigarh PBS – Station Density & Access</h3>
+          <p>Sector‑wise siting vs ITDP benchmarks; integration with bus/metro; equity coverage and expansion candidates.</p>
+        </div>
+        <div class="item">
+          <h3>Delhi–Gurgaon E‑Scooter GPS (173M rows)</h3>
+          <p>Battery‑ID–based movement, altitude profiles, speed distributions, and corridor‑wise safety overlays.</p>
+        </div>
+        <div class="item">
+          <h3>Micromobility Policy Portal</h3>
+          <p>Country & vehicle‑type navigation with citations; hosted on GitHub Pages.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="card">
+      <h2>Publications & Writing</h2>
+      <div class="list">
+        <div class="pub">
+          <strong>Systematic Review of Micromobility Policies</strong> <span class="tag">Under review</span>
+          <p>Screened 222 articles; 59 coded for regulatory themes, safety, and urban integration.</p>
+        </div>
+        <div class="pub">
+          <strong>PBS Usage & Built‑Environment Correlates (Chandigarh)</strong> <span class="tag">In prep</span>
+          <p>NB/ZINB models with station density, population, night‑lights, and POI compositions.</p>
+        </div>
+        <div class="pub">
+          <strong>Micromobility Safety on Indian Arterials</strong> <span class="tag">Working</span>
+          <p>Crash overlays, speed exposure, and infrastructure risk factors.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="talks" class="card">
+      <h2>Talks & Posters</h2>
+      <ul class="list">
+        <li class="item"><h3>TRIP‑C Seminar Series</h3><p>Spatial analytics for e‑scooters and PBS planning in Indian cities.</p></li>
+        <li class="item"><h3>CTRG / TRR Submissions</h3><p>Policy benchmarking and demand drivers for micromobility.</p></li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:abhishekbansal359@gmail.com">abhishekbansal359@gmail.com</a> · GitHub: <a href="https://github.com/abhishek2773">@abhishek2773</a></p>
+      <p class="note">To add social links, edit this section. You can also place a <code>contact.html</code> or Google Form link here.</p>
+    </section>
+
+    <div class="footer">© <span id="y"></span> Abhishek Bansal · Built with HTML/CSS · Hosted on GitHub Pages</div>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
 </html>
